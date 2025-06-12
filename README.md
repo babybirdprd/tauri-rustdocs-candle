@@ -96,6 +96,38 @@ The core features of this application (documentation processing, embedding, sema
     ```
     The bundled application will be located in `src-tauri/target/release/bundle/`.
 
+## Building from Source
+
+If you prefer to build the application from source manually beyond the development setup, you can use the provided build scripts. These scripts automate the process of installing frontend dependencies and then invoking `cargo tauri build` to create a production bundle.
+
+### On Linux or macOS
+
+1.  Open your terminal and navigate to the root directory of the project.
+2.  Make the build script executable:
+    ```bash
+    chmod +x build.sh
+    ```
+3.  Run the script:
+    ```bash
+    ./build.sh
+    ```
+    Alternatively, you can run it with `bash build.sh`.
+
+### On Windows
+
+1.  Open PowerShell. You may need to adjust your execution policy to allow running local scripts. For example:
+    ```powershell
+    Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+    ```
+    (Use with caution and understand the implications of execution policies.)
+2.  Navigate to the root directory of the project.
+3.  Run the script:
+    ```powershell
+    .\build.ps1
+    ```
+
+The scripts will output progress and, upon successful completion, the application bundle will be located in `src-tauri/target/release/bundle/`.
+
 ## Using the Application
 
 1.  **Project Management Page (`/projects`):**
